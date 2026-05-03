@@ -15,6 +15,7 @@ RECAP 将 value function 作为 offline-to-online RL critic：先学习一个 la
 KAI0 的 Stage Advantage 更像阶段进度/偏好估计器：先人工标注 `stage_progress_gt`，训练模型直接预测两帧观测间的 progress delta，再把预测优势离散成 prompt 条件供 AWBC 使用。来源：[KAI0](../summaries/kai0-resource-aware-robust-manipulation.md)、Zotero item `MNPQV5ZH`、本地 `/Users/ruanyifan/code/kai0`。
 
 ## 2. 比较维度或分析框架
+
 | 维度                    | RECAP / $\pi^*_{0.6}$                                                                                      | KAI0 / Stage Advantage                                                                              |
 | --------------------- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | 被建模量                  | $p_\phi(V \mid o_t, \ell)$，语言条件的 distributional state value；返回分布离散为 `B = 201` bins                         | 两帧或阶段内的 progress/advantage；代码中训练目标为 `stage_progress_gt - his_-100_stage_progress_gt`                |
