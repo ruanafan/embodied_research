@@ -1,102 +1,102 @@
 sections:
-  - title: UMI 系列与 Robot-Free Demonstration
+  - title: "UMI 系列与 Robot-Free Demonstration"
     groups:
-      - title: 论文摘要
+      - title: "论文摘要"
         items:
-          - title: Universal Manipulation Interface
-            url: /summaries/universal-manipulation-interface.html
-          - title: UMI on Legs
-            url: /summaries/umi-on-legs.html
-          - title: FastUMI
-            url: /summaries/fastumi.html
-          - title: ActiveUMI
-            url: /summaries/activeumi.html
-          - title: RDT2
-            url: /summaries/rdt2.html
-          - title: HoMMI
-            url: /summaries/hommi.html
-          - title: TAMEn
-            url: /summaries/tamen.html
-          - title: ARCap
-            url: /summaries/arcap.html
-          - title: exUMI
-            url: /summaries/exumi.html
-      - title: 概念页
+          - title: "Universal Manipulation Interface"
+            url: "/summaries/universal-manipulation-interface.html"
+          - title: "UMI on Legs"
+            url: "/summaries/umi-on-legs.html"
+          - title: "FastUMI"
+            url: "/summaries/fastumi.html"
+          - title: "ActiveUMI"
+            url: "/summaries/activeumi.html"
+          - title: "RDT2"
+            url: "/summaries/rdt2.html"
+          - title: "HoMMI"
+            url: "/summaries/hommi.html"
+          - title: "TAMEn"
+            url: "/summaries/tamen.html"
+          - title: "ARCap"
+            url: "/summaries/arcap.html"
+          - title: "exUMI"
+            url: "/summaries/exumi.html"
+      - title: "概念页"
         items:
-          - title: Robot-Free Trajectory Acquisition
-            url: /concepts/robot-free-trajectory-acquisition.html
-          - title: Multi-Sensor Synchronization
-            url: /concepts/multi-sensor-synchronization-for-robot-data.html
-          - title: State-Action Representation for UMI
-            url: /concepts/state-action-representation-for-umi.html
-          - title: Cross-Embodiment Policy Interface
-            url: /concepts/cross-embodiment-policy-interface.html
-      - title: 综合页
+          - title: "Robot-Free Trajectory Acquisition"
+            url: "/concepts/robot-free-trajectory-acquisition.html"
+          - title: "Multi-Sensor Synchronization for Robot Data"
+            url: "/concepts/multi-sensor-synchronization-for-robot-data.html"
+          - title: "State-Action Representation for UMI"
+            url: "/concepts/state-action-representation-for-umi.html"
+          - title: "Cross-Embodiment Policy Interface"
+            url: "/concepts/cross-embodiment-policy-interface.html"
+      - title: "综合页"
         items:
-          - title: UMI Series Data Interface Overview
-            url: /syntheses/umi-series-data-interface-overview.html
+          - title: "UMI Series Data Interface Overview"
+            url: "/syntheses/umi-series-data-interface-overview.html"
 
-  - title: 强化学习与 Generalist Robot Policies
+  - title: "通用机器人策略的强化学习（Reinforcement Learning for Generalist Robot Policies）"
     groups:
-      - title: 论文摘要
+      - title: "论文摘要"
         items:
-          - title: Learning while Deploying
-            url: /summaries/learning-while-deploying.html
-          - title: SOP
-            url: /summaries/sop-scalable-online-post-training-system.html
-          - title: π*0.6 / RECAP
-            url: /summaries/pi-star-0-6-recap.html
-          - title: χ0 / KAI0
-            url: /summaries/kai0-resource-aware-robust-manipulation.html
-          - title: HG-DAgger
-            url: /summaries/hg-dagger.html
-      - title: 概念页
+          - title: "Learning while Deploying"
+            url: "/summaries/learning-while-deploying.html"
+          - title: "SOP: Scalable Online Post-Training System"
+            url: "/summaries/sop-scalable-online-post-training-system.html"
+          - title: "π*0.6: a VLA That Learns From Experience"
+            url: "/summaries/pi-star-0-6-recap.html"
+          - title: "χ0 / KAI0: Resource-Aware Robust Manipulation"
+            url: "/summaries/kai0-resource-aware-robust-manipulation.html"
+          - title: "HG-DAgger"
+            url: "/summaries/hg-dagger.html"
+      - title: "概念页"
         items:
-          - title: Online Post-Training for VLA
-            url: /concepts/online-post-training-for-vla.html
-          - title: Offline-to-Online RL for VLA
-            url: /concepts/offline-to-online-rl-for-vla.html
-          - title: Advantage Modeling for VLA
-            url: /concepts/advantage-modeling-for-vla.html
-          - title: Interactive Imitation Learning
-            url: /concepts/interactive-imitation-learning.html
-      - title: 综合页
+          - title: "Online Post-Training for VLA"
+            url: "/concepts/online-post-training-for-vla.html"
+          - title: "Offline-to-Online RL for VLA"
+            url: "/concepts/offline-to-online-rl-for-vla.html"
+          - title: "Advantage Modeling for VLA"
+            url: "/concepts/advantage-modeling-for-vla.html"
+          - title: "Interactive Imitation Learning"
+            url: "/concepts/interactive-imitation-learning.html"
+      - title: "综合页"
         items:
-          - title: SOP vs Learning while Deploying
-            url: /syntheses/sop-vs-learning-while-deploying.html
-          - title: KAI0 Stage Advantage vs RECAP
-            url: /syntheses/kai0-stage-advantage-vs-recap-value-function.html
+          - title: "SOP vs Learning while Deploying"
+            url: "/syntheses/sop-vs-learning-while-deploying.html"
+          - title: "KAI0 Stage Advantage vs RECAP Value Function"
+            url: "/syntheses/kai0-stage-advantage-vs-recap-value-function.html"
 
-  - title: 交互式与开放世界 VLA
+  - title: "交互式与开放世界 VLA（Interactive and Open-World VLA）"
     groups:
-      - title: 论文摘要
+      - title: "论文摘要"
         items:
-          - title: Yell At Your Robot
-            url: /summaries/yell-at-your-robot.html
-          - title: Hi Robot
-            url: /summaries/hi-robot.html
-          - title: π0.5
-            url: /summaries/pi0-5.html
-      - title: 概念页
+          - title: "Yell At Your Robot"
+            url: "/summaries/yell-at-your-robot.html"
+          - title: "Hi Robot"
+            url: "/summaries/hi-robot.html"
+          - title: "π0.5"
+            url: "/summaries/pi0-5.html"
+      - title: "概念页"
         items:
-          - title: Hierarchical Language Supervision
-            url: /concepts/hierarchical-language-supervision-for-vla.html
-      - title: 综合页
+          - title: "Hierarchical Language Supervision for VLA"
+            url: "/concepts/hierarchical-language-supervision-for-vla.html"
+      - title: "综合页"
         items:
-          - title: VLA Data Annotation and Training
-            url: /syntheses/vla-data-annotation-and-training.html
+          - title: "VLA Data Annotation and Training"
+            url: "/syntheses/vla-data-annotation-and-training.html"
 
-  - title: Agentic Long-Horizon Robotics
+  - title: "Agentic Long-Horizon Robotics"
     groups:
-      - title: 论文摘要
+      - title: "论文摘要"
         items:
-          - title: RoboClaw
-            url: /summaries/roboclaw.html
-      - title: 综合页
+          - title: "RoboClaw"
+            url: "/summaries/roboclaw.html"
+      - title: "综合页"
         items:
-          - title: RoboClaw vs VLM+VLA Long-Horizon
-            url: /syntheses/roboclaw-vs-vlm-vla-long-horizon.html
+          - title: "RoboClaw vs VLM+VLA Long-Horizon"
+            url: "/syntheses/roboclaw-vs-vlm-vla-long-horizon.html"
 
 maintenance:
-  - title: Operation Log
-    url: /log.html
+  - title: "Operation Log"
+    url: "/log.html"

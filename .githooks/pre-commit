@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+
+staged_files=$(git diff --cached --name-only --diff-filter=ACMR)
+
+if printf '%s\n' "$staged_files" | grep -Eq '^(wiki/|\.github/pages/scripts/sync_pages_navigation\.py|\.github/pages/_data/navigation\.yml)'; then
+  echo "Syncing Pages navigation from wiki/index.md..."
+  PYTHONDONTWRITEBYTECODE=1 python3 .github/pages/scripts/sync_pages_navigation.py
+  git add .github/pages/_data/navigation.yml
+fi
+
+PYTHONDONTWRITEBYTECODE=1 python3 .github/pages/scripts/sync_pages_navigation.py --check
+PYTHONDONTWRITEBYTECODE=1 python3 .github/pages/scripts/test_sync_pages_navigation.py
