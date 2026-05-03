@@ -75,17 +75,20 @@ assets/
 
 1. **Zotero MCP**
 2. **本地 `raw/` 目录**
-3. **ArXiv / Web Search**
+3. **本地 `/Users/ruanyifan/code/` 代码仓库**
+4. **ArXiv / Web Search**
 
 执行规则：
 
-1. 优先检查该资料是否已存在于 Zotero 或本地 `raw/`。
-2. 若本地不存在且确有必要，再进行 Web 检索或下载。
-3. 所有新获取的原始素材必须先保存到 `raw/{paper_title_snake_case}/`，再开始知识整理。
-4. 为每篇核心论文生成或更新对应摘要页。
-5. 提取并更新相关概念页。
-6. 更新 `wiki/index.md`，确保新页面可被发现。
-7. 在 `wiki/log.md` 中追加一条 ingest 记录。
+1. 优先检查该资料是否已存在于 Zotero、本地 `raw/` 或本地 `/Users/ruanyifan/code/`。
+2. 若涉及代码仓库，且 `/Users/ruanyifan/code/` 下已经存在相关仓库，必须复用本地仓库，不得重新 `git clone` 或下载重复代码。
+3. 使用本地代码作为来源时，必须在 wiki 中记录绝对路径、repo remote、commit hash 和关键入口文件；若该仓库不是论文原始实现，必须明确标注为“参考实现”或“非论文原始实现”。
+4. 若本地不存在且确有必要，再进行 Web 检索或下载。
+5. 所有新获取的原始素材必须先保存到 `raw/{paper_title_snake_case}/`，再开始知识整理。
+6. 为每篇核心论文生成或更新对应摘要页。
+7. 提取并更新相关概念页。
+8. 更新 `wiki/index.md`，确保新页面可被发现。
+9. 在 `wiki/log.md` 中追加一条 ingest 记录。
 
 ### 4.2 Query
 当用户提问时，默认不是直接基于原始资料临时作答，而是优先利用已有 wiki。
@@ -149,6 +152,12 @@ status: [Draft]
 - `last_updated`：使用 `YYYY-MM-DD`。
 - `source`：可写为 `Zotero`、`Local`、`Web`，也可多值并列。
 - `status`：可写为 `Draft`、`Verified`、`Outdated`。
+
+### 6.1.1 Wiki 语言与术语习惯
+- `wiki/` 下的长期知识页默认使用中文主文，保持解释、结论、局限性、比较维度和日志新增条目的中文可读性。
+- 典型学术术语、模型名、算法名、论文名、数据集名、缩写和代码标识保留英文，例如 `VLA`、`RL`、`flow matching`、`HG-DAgger`、`RECAP`、`DIVL`、`QAM`、`FAST action tokenization`。
+- 关键术语首次出现时采用“中文解释（English term / acronym）”格式，例如“离线到在线强化学习（offline-to-online RL）”；后文可直接使用稳定英文缩写或专名。
+- 保持 YAML frontmatter 字段名、`tags`、`source`、`status`、Zotero key、DOI、本地路径和 Markdown 链接目标不翻译，避免破坏页面契约和可追溯性。
 
 ### 6.2 论文摘要页 `wiki/summaries/`
 每篇核心论文的摘要页至少包含以下部分：
@@ -227,7 +236,9 @@ status: [Draft]
   - 具体论文
   - Zotero 条目
   - 本地原始文件
+  - 本地代码仓库路径与 commit
   - 或经过验证的 Web 来源
+- 当引用本地代码仓库作为来源时，必须记录绝对路径、repo remote、commit hash 和关键入口文件；若不是论文原始实现，必须显式标注“参考实现”或“非论文原始实现”。
 - 当结论是跨文献综合时，必须列出参与综合的来源页或来源文献。
 - 若证据不足，必须明确标注“证据不足”或“待验证”，不能伪装成确定结论。
 
@@ -242,9 +253,9 @@ status: [Draft]
 链接示例：
 
 ```md
-- See [Diffusion Policy](../concepts/diffusion-policy.md)
-- Related summary: [RT-1](../summaries/rt-1.md)
-- Background synthesis: [Policy Learning Overview](../syntheses/policy-learning-overview.md)
+- 参见：[Diffusion Policy](../concepts/diffusion-policy.md)
+- 相关摘要：[RT-1](../summaries/rt-1.md)
+- 背景综合：[Policy Learning Overview](../syntheses/policy-learning-overview.md)
 ```
 
 ## 8. 冲突处理与知识演化
@@ -273,6 +284,7 @@ status: [Draft]
 - 不引用 Obsidian 插件、Dataview、图谱视图、Web Clipper 等作为默认机制。
 - 不使用依赖特定工具生态的链接语法作为默认规范。
 - 不直接修改原始资料以“适配”知识库。
+- 不在 `/Users/ruanyifan/code/` 已有相关仓库时重新下载或克隆重复代码。
 - 不在未写回 wiki 的情况下把高价值综合结果视为任务完成。
 
 ## 10. 执行原则
