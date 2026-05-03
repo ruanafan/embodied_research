@@ -1,0 +1,35 @@
+<aside class="kb-sidebar" aria-label="Knowledge base navigation">
+  <nav class="kb-sidebar__nav">
+    <a class="kb-sidebar__home{% if page.url == '/' %} is-active{% endif %}" href="{{ '/' | relative_url }}">
+      主页索引
+    </a>
+
+    {% for section in site.data.navigation.sections %}
+      <section class="kb-sidebar__section">
+        <h2>{{ section.title }}</h2>
+        <ul>
+          {% for item in section.items %}
+            <li>
+              <a class="{% if page.url == item.url %}is-active{% endif %}" href="{{ item.url | relative_url }}">
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+
+    <section class="kb-sidebar__section kb-sidebar__section--maintenance">
+      <h2>维护</h2>
+      <ul>
+        {% for item in site.data.navigation.maintenance %}
+          <li>
+            <a class="{% if page.url == item.url %}is-active{% endif %}" href="{{ item.url | relative_url }}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </nav>
+</aside>

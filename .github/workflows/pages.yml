@@ -6,6 +6,7 @@ on:
     paths:
       - "wiki/**"
       - "assets/**"
+      - ".github/pages/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -35,6 +36,7 @@ jobs:
           if [ -d assets ]; then
             cp -R assets _pages_source/assets
           fi
+          cp -R .github/pages/. _pages_source/
           cat > _pages_source/_config.yml <<'YAML'
           title: Embodied AI Knowledge Base
           description: Structured notes for embodied AI research.
@@ -44,6 +46,11 @@ jobs:
           relative_links:
             enabled: true
             collections: true
+          defaults:
+            - scope:
+                path: ""
+              values:
+                layout: default
           YAML
 
       - name: Build with Jekyll
