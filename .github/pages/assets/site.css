@@ -119,6 +119,20 @@ body {
   margin: 0 0 8px;
 }
 
+.kb-sidebar__group {
+  margin-top: 10px;
+}
+
+.kb-sidebar__group h3 {
+  color: var(--kb-accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.35;
+  margin: 0 0 4px;
+  padding-left: 10px;
+}
+
 .kb-sidebar__section ul {
   list-style: none;
   margin: 0;
@@ -193,16 +207,22 @@ body {
   color: #18655f;
 }
 
-.kb-content table {
-  border-collapse: collapse;
-  display: block;
-  font-size: 13px;
-  line-height: 1.55;
+.kb-table-wrap {
   margin: 18px 0 28px;
   max-width: 100%;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.kb-content table {
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+  min-width: 980px;
+  table-layout: auto;
   white-space: normal;
-  width: max-content;
+  width: 100%;
 }
 
 .kb-content th,

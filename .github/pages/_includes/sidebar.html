@@ -7,15 +7,20 @@
     {% for section in site.data.navigation.sections %}
       <section class="kb-sidebar__section">
         <h2>{{ section.title }}</h2>
-        <ul>
-          {% for item in section.items %}
-            <li>
-              <a class="{% if page.url == item.url %}is-active{% endif %}" href="{{ item.url | relative_url }}">
-                {{ item.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
+        {% for group in section.groups %}
+          <div class="kb-sidebar__group">
+            <h3>{{ group.title }}</h3>
+            <ul>
+              {% for item in group.items %}
+                <li>
+                  <a class="{% if page.url == item.url %}is-active{% endif %}" href="{{ item.url | relative_url }}">
+                    {{ item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endfor %}
       </section>
     {% endfor %}
 

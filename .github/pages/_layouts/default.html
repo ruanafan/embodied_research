@@ -17,7 +17,7 @@
       {% include sidebar.html %}
 
       <main id="content" class="kb-content" aria-label="Content">
-        {{ content }}
+        {{ content | replace: '<table>', '<div class="kb-table-wrap"><table>' | replace: '</table>', '</table></div>' }}
       </main>
     </div>
   </body>
