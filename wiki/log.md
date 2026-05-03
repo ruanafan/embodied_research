@@ -74,3 +74,10 @@ status: [Draft]
 - Sources: Local
 - Updated: `wiki/syntheses/vla-data-annotation-and-training.md`, `wiki/log.md`
 - Notes: 补充 correction layer 的四类数据来源、事件级标注 schema、VLM supervised/replanning/preference 使用方式、VLA motor correction 使用前提，以及按 correction 类型路由到 VLM/VLA 的规则。
+
+## [2026-05-03] ingest | roboclaw agentic long-horizon framework
+- Sources: Zotero, Local, Web
+- Added: `raw/roboclaw_an_agentic_framework_for_scalable_long_horizon_robotic_tasks/paper.pdf`
+- Added: `wiki/summaries/roboclaw.md`, `wiki/syntheses/roboclaw-vs-vlm-vla-long-horizon.md`
+- Updated: `wiki/index.md`, `wiki/log.md`
+- Notes: 使用 Zotero item `NJ3FHPK2` 与 attachment `ZS3WJD4Z` 归档 RoboClaw，并关联本地 `/Users/ruanyifan/code/RoboClaw` commit `5238184185efee5c36017f10a79c2e0de4830690`；新增独立综合页，比较 RoboClaw-style lifecycle framework 与 VLM+VLA 分层长序任务方案在数据采集、policy orchestration、correction 使用、训练和失败恢复上的异同及优劣。

@@ -1,5 +1,5 @@
 ---
-tags: [EmbodiedAI, Robotics, Reinforcement_Learning, VLA, Advantage_Modeling]
+tags: [EmbodiedAI, Robotics, Reinforcement_Learning, VLA, Advantage_Modeling, Agentic_Robotics]
 last_updated: 2026-05-03
 source: [Zotero, Local, Web]
 status: [Draft]
@@ -38,3 +38,11 @@ status: [Draft]
 
 ### 综合页
 - [VLA Data Annotation and Training](syntheses/vla-data-annotation-and-training.md)：面向 π0.5 类长序任务，整理 VLM/VLA 输入输出边界、数据标注 schema、样例与分阶段训练配方。
+
+## Agentic Long-Horizon Robotics
+
+### 论文摘要
+- [RoboClaw](summaries/roboclaw.md)：由 VLM meta-controller 统一数据采集、policy learning 和长序部署的 agentic robotics framework，引入 EAP 自复位采集与 policy orchestration。
+
+### 综合页
+- [RoboClaw vs VLM+VLA Long-Horizon](syntheses/roboclaw-vs-vlm-vla-long-horizon.md)：比较 RoboClaw 与 VLM+VLA 分层方案在接口、数据、correction、训练、失败恢复和工程复杂度上的异同及适用边界。
