@@ -1,11 +1,33 @@
 ---
-tags: [EmbodiedAI, Robotics, Reinforcement_Learning, VLA, Advantage_Modeling, Agentic_Robotics]
+tags: [EmbodiedAI, Robotics, Reinforcement_Learning, VLA, Advantage_Modeling, Agentic_Robotics, UMI]
 last_updated: 2026-05-03
 source: [Zotero, Local, Web]
 status: [Draft]
 ---
 
 # 具身智能知识库（Embodied AI Knowledge Base）
+
+## UMI 系列与 Robot-Free Demonstration
+
+### 论文摘要
+- [Universal Manipulation Interface](summaries/universal-manipulation-interface.md)：原始 UMI 框架，重点记录 GoPro VIO/IMU 轨迹获取、latency matching 和 relative EE trajectory policy interface。
+- [UMI on Legs](summaries/umi-on-legs.md)：将 UMI manipulation policy 通过 task-frame end-effector trajectory 接入 quadruped whole-body controller。
+- [FastUMI](summaries/fastumi.md)：用 T265/GoPro/ArUco pipeline 简化原始 UMI 的 tracking 与 calibration，并支持 TCP/joint trajectory 数据格式。
+- [ActiveUMI](summaries/activeumi.md)：用 Quest headset/controllers 记录手部与 head 6DoF trajectories，把 active perception 纳入 action space。
+- [RDT2](summaries/rdt2.md)：将大规模 UMI data 接入 VLA training，比较 RVQ action tokens、flow matching 和 distillation 的 action representation 取舍。
+- [HoMMI](summaries/hommi.md)：用三 iPhone/ARKit 采集 wrist/head multimodal trajectories，并用 gripper-centric 3D representation 与 look-at point 缓解 egocentric embodiment gap。
+- [TAMEn](summaries/tamen.md)：以 MoCap/VR dual-mode、online feasibility checking 和 recovery data 扩展 UMI-style contact-rich bimanual data collection。
+- [ARCap](summaries/arcap.md)：AR feedback 数据采集系统，用 retargeted virtual robot 实时提示 collision/speed/kinematic violations。
+- [exUMI](summaries/exumi.md)：UMI 的可扩展触觉/AR MoCap 分支；本知识库只作为 auxiliary sensor stream 与 calibration 参考。
+
+### 概念页
+- [Robot-Free Trajectory Acquisition](concepts/robot-free-trajectory-acquisition.md)：整理 UMI 系列中不依赖真实机器人 teleoperation 的轨迹获取方式。
+- [Multi-Sensor Synchronization for Robot Data](concepts/multi-sensor-synchronization-for-robot-data.md)：比较 latency matching、ROS clock、ARKit/Quest shared frame、marker tracking 和 feasibility validation。
+- [State-Action Representation for UMI](concepts/state-action-representation-for-umi.md)：解释 relative EE trajectory、task-frame trajectory、TCP/joint trajectory、RVQ action tokens 和 look-at point 的取舍。
+- [Cross-Embodiment Policy Interface](concepts/cross-embodiment-policy-interface.md)：抽象 UMI 系列如何用中间接口连接 robot-free demonstrations 与 robot-specific controllers。
+
+### 综合页
+- [UMI Series Data Interface Overview](syntheses/umi-series-data-interface-overview.md)：按 trajectory source、sensor streams、sync/alignment strategy、state/observation 与 action representation 横向比较 UMI 系列。
 
 ## 通用机器人策略的强化学习（Reinforcement Learning for Generalist Robot Policies）
 

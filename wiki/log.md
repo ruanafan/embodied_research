@@ -81,3 +81,12 @@ status: [Draft]
 - Added: `wiki/summaries/roboclaw.md`, `wiki/syntheses/roboclaw-vs-vlm-vla-long-horizon.md`
 - Updated: `wiki/index.md`, `wiki/log.md`
 - Notes: 使用 Zotero item `NJ3FHPK2` 与 attachment `ZS3WJD4Z` 归档 RoboClaw，并关联本地 `/Users/ruanyifan/code/RoboClaw` commit `5238184185efee5c36017f10a79c2e0de4830690`；新增独立综合页，比较 RoboClaw-style lifecycle framework 与 VLM+VLA 分层长序任务方案在数据采集、policy orchestration、correction 使用、训练和失败恢复上的异同及优劣。
+
+## [2026-05-03] ingest | umi series data interface
+- Sources: Zotero, Local, Web
+- Added raw PDFs: `raw/universal_manipulation_interface_in_the_wild_robot_teaching_without_in_the_wild_robots/paper.pdf`, `raw/umi_on_legs_making_manipulation_policies_mobile_with_manipulation_centric_whole_body_controllers/paper.pdf`, `raw/fastumi_a_scalable_and_hardware_independent_universal_manipulation_interface_with_dataset/paper.pdf`, `raw/activeumi_robotic_manipulation_with_active_perception_from_robot_free_human_demonstrations/paper.pdf`, `raw/rdt2_exploring_the_scaling_limit_of_umi_data_towards_zero_shot_cross_embodiment_generalization/paper.pdf`, `raw/hommi_learning_whole_body_mobile_manipulation_from_human_demonstrations/paper.pdf`, `raw/tamen_tactile_aware_manipulation_engine_for_closed_loop_data_collection_in_contact_rich_tasks/paper.pdf`, `raw/arcap_collecting_high_quality_human_demonstrations_for_robot_learning_with_augmented_reality_feedback/paper.pdf`, `raw/exumi_extensible_robot_teaching_system_with_action_aware_task_agnostic_tactile_representation/paper.pdf`
+- Added summaries: `wiki/summaries/universal-manipulation-interface.md`, `wiki/summaries/umi-on-legs.md`, `wiki/summaries/fastumi.md`, `wiki/summaries/activeumi.md`, `wiki/summaries/rdt2.md`, `wiki/summaries/hommi.md`, `wiki/summaries/tamen.md`, `wiki/summaries/arcap.md`, `wiki/summaries/exumi.md`
+- Added concepts: `wiki/concepts/robot-free-trajectory-acquisition.md`, `wiki/concepts/multi-sensor-synchronization-for-robot-data.md`, `wiki/concepts/state-action-representation-for-umi.md`, `wiki/concepts/cross-embodiment-policy-interface.md`
+- Added synthesis: `wiki/syntheses/umi-series-data-interface-overview.md`
+- Updated: `wiki/index.md`
+- Notes: 根据用户关注将 UMI 系列专题聚焦到三条主线：trajectory acquisition、多传感器 synchronization/alignment、训练时 state/action representation；触觉/力觉仅作为 TAMEn/exUMI 的 auxiliary sensor stream 或 recovery signal 记录。复用本地 `/Users/ruanyifan/code/umi/` 与 `/Users/ruanyifan/code/RDT2` 现有仓库，未重复 clone。
